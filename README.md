@@ -1,3 +1,12 @@
+# Tanstack Tables
+
+This is a small project to learn Tanstack Tables in React.
+
+There are currently 4 different tables. Start off with the [basic-table](./src/app/basic-table.tsx), then continue to any of the other tables.
+
+
+## NextJS Boilerplate 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
