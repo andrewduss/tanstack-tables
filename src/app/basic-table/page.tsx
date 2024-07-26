@@ -20,11 +20,11 @@ const BasicTablePage = () => {
     }),
     columnHelper.accessor('created_at', {
       header: () => "Created At",
-      cell: info => info.getValue(),
+      cell: info => new Date(info.getValue()).toLocaleDateString(),
     }),
     columnHelper.accessor('updated_at', {
       header: () => "Updated At",
-      cell: info => info.getValue(),
+      cell: info => new Date(info.getValue()).toLocaleDateString(),
     }),
   ]
 
@@ -48,9 +48,9 @@ const BasicTablePage = () => {
       <table className="w-full text-sm text-center">
         <thead>
           {table.getHeaderGroups().map((hg) => (
-            <tr id={hg.id}>
+            <tr key={hg.id}>
               {hg.headers.map((h) => (
-                <th scope="col" className="px-6 py-3" id={h.id}>
+                <th scope="col" className="px-6 py-3" key={h.id}>
                   {flexRender(h.column.columnDef.header, h.getContext())}
                 </th>
               ))}
@@ -59,9 +59,9 @@ const BasicTablePage = () => {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr id={row.id}>
+            <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <td id={cell.id}>
+                <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}
