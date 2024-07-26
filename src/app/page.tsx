@@ -7,6 +7,7 @@ export default function Home() {
       <Link href="/basic-table">Basic Table</Link>
       <Link href="/sortable-table">Sortable Table</Link>
       <Link href="/column-filterable-table">Column Filterable Table</Link>
+      <Link href="/global-filterable-table">Global Filterable Table</Link>
       </div>    
     </main>
   );
