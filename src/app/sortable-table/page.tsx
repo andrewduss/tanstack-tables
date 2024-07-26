@@ -65,6 +65,7 @@ const SortableTablePage = () => {
       <div>TablePage</div>
       <hr />
       <div className="m-4">
+        <p>Click on the table headers to change sorting</p>
       <table className="w-full text-sm text-center">
         <thead>
           {table.getHeaderGroups().map((hg) => (
