@@ -6,6 +6,7 @@ export default function Home() {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
       <Link href="/basic-table">Basic Table</Link>
       <Link href="/sortable-table">Sortable Table</Link>
+      <Link href="/column-filterable-table">Column Filterable Table</Link>
       </div>    
     </main>
   );
