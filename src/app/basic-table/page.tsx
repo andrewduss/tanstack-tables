@@ -12,6 +12,8 @@ export type Zipcode = {
 }
 
 const BasicTablePage = () => {
+
+  // Create Columns
   const columnHelper = createColumnHelper<Zipcode>()
   const columns = [
     columnHelper.accessor('zipcode', {
@@ -28,12 +30,16 @@ const BasicTablePage = () => {
     }),
   ]
 
+
+  // Get/Set Data
   const [data, setData] = useState(zipcodes)
   // useEffect(() => {
   //   const url = "http://localhost:3000/api/zipcodes"
   //   fetch(url).then((resp) => resp.json()).then((users) => setData(users) )
   // }, [])
 
+
+  // Craete Table Object
   const table = useReactTable({
     data: data,
     columns,
@@ -72,11 +78,6 @@ const BasicTablePage = () => {
     </>
 
   )
-}
-
-function getColumns() {
-
-  return
 }
 
 export default BasicTablePage
